@@ -64,7 +64,7 @@ let complexCoordinates(x,y) =
 let determineColor (distance:int) =
     if (distance = 0) then Color.Black          // Black if in the set
     else match (distance % 8) with              // Colored if not
-        | 1 -> Color.FromArgb(0x66, 0x99, 0xff)
+        | 1 -> Color.FromArgb(0x66, 0x99, 0xff) // Rotate through similar colors
         | 2 -> Color.FromArgb(0x99, 0x66, 0xff)
         | 3 -> Color.FromArgb(0x99, 0x66, 0xcc)
         | 4 -> Color.FromArgb(0x66, 0x66, 0xcc)
