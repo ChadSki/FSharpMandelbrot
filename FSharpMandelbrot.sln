@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpMandelbrot", "FSharpMandelbrot\FSharpMandelbrot.fsproj", "{0C9E3D81-EB7F-43D1-9F8C-6CA8B6E2A317}"
 EndProject
 Global

@@ -62,16 +62,16 @@ let complexCoordinates(x,y) =
 
 // Maps distance from the mandelbrot set to a color
 let determineColor (distance:int) =
-    if (distance = 0) then Color.Black          // Black if in the set
-    else match (distance % 8) with              // Colored if not
-        | 1 -> Color.FromArgb(0x66, 0x99, 0xff) // Rotate through similar colors
-        | 2 -> Color.FromArgb(0x99, 0x66, 0xff)
-        | 3 -> Color.FromArgb(0x99, 0x66, 0xcc)
-        | 4 -> Color.FromArgb(0x66, 0x66, 0xcc)
-        | 5 -> Color.FromArgb(0x66, 0x66, 0xff)
-        | 6 -> Color.FromArgb(0x99, 0x99, 0xff)
-        | 7 -> Color.FromArgb(0x99, 0x99, 0xcc)
-        | _ -> Color.FromArgb(0x66, 0x99, 0xcc)
+    if (distance = 0) then Color.Black              // Black if in the set
+    else match (distance % 8) with                  // Colored if not
+            | 1 -> Color.FromArgb(0x66, 0x99, 0xff) // Rotate through similar colors
+            | 2 -> Color.FromArgb(0x99, 0x66, 0xff)
+            | 3 -> Color.FromArgb(0x99, 0x66, 0xcc)
+            | 4 -> Color.FromArgb(0x66, 0x66, 0xcc)
+            | 5 -> Color.FromArgb(0x66, 0x66, 0xff)
+            | 6 -> Color.FromArgb(0x99, 0x99, 0xff)
+            | 7 -> Color.FromArgb(0x99, 0x99, 0xcc)
+            | _ -> Color.FromArgb(0x66, 0x99, 0xcc)
 
 // Sets up the canvas and maps the mandelbrot set onto it
 let generateMandelbrotImage (width:int) (height:int) (iterations:int) =
@@ -108,6 +108,7 @@ do
     let box = new PictureBox(BackColor = Color.White,
                              Dock = DockStyle.Fill,
                              SizeMode = PictureBoxSizeMode.CenterImage)
+
     box.Image <- generateMandelbrotImage xSize ySize 600
 
     // Stop the stopwatch
