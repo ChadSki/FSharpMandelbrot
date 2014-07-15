@@ -1,6 +1,8 @@
 # FSharpMandelbrot
 Benchmarks the generation of a Mandelbrot fractal.
 
+![Screenshot](http://i.imgur.com/vQjbjnh.png)
+
 ## Configuration
 Since this was to be a simple project, configuration is done by adjusting
 constants and recompiling.
